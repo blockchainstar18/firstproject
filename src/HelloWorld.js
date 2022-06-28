@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 // import { ConnectWallet } from "@3rdweb/react";
 // import { useWeb3 } from "@3rdweb/hooks";
-import Web3Modal from "web3modal";
+import Web3Modal, { PROVIDER_WRAPPER_CLASSNAME } from "web3modal";
 import { ethers } from "ethers";
 import { providerOptions } from "./providerOptions";
 import {
@@ -148,13 +148,16 @@ const onChangeFunc = async (e) =>
     if(e.target.value.length >= 3 )
       if(e.target.value.substr(e.target.value.length - 3) == ".0x")
         len -= 3;
-    var temp;
-    if(len > 4) 
-        temp = 1;
-    else temp = 20 - (len - 1 ) * 5;
+    var temp = 10;
+    // if(len > 4) 
+    //     temp = 1;
+    // else temp = 20 - (len - 1 ) * 5;
+    for (let index = 0; index < len-1; index++) {
+      temp/=2;
+    }
     
-    if(temp > 20)
-      temp = 20;    
+    // if(temp > 20)
+    //   temp = 20;    
     // setPrice(temp);
     price = temp;
 
