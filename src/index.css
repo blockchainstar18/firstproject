@@ -1,0 +1,184 @@
+body {
+  margin-top: 3%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height:30vh;  
+    font-size: 16px;
+    /* background-image:url("./images/back.jpg"); */
+    background-color:white;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#container {
+  width: 180vh;
+ /* border: 4px dashed rgba(4, 4, 5, 0.1); */
+    min-height: 140px;
+    /* padding: 20px; */
+    position: relative;
+    border-radius: 16px;
+    -webkit-box-align: center;
+    align-items: left;
+    -webkit-box-pack: center;
+    justify-content: left;
+    flex-direction: column;
+    /* text-align:left; */
+    word-break: break-word;
+   
+}
+
+row {
+  padding-top: 10px;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  font-size: 30px;
+  width: 60%;
+  background-color: rgb(232, 232, 232);
+  border-color: rgba(201, 201, 214, 0.826);
+  line-height: 60px;
+  color:rgb(23, 22, 22);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  height: 90px;
+  padding-left: 2%;
+  /* padding-top: 0px; */
+  /* margin-top: 10px; */
+}
+
+#status {
+  color:  #254cdd;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#error {
+  color:  #ef1111;
+  margin-top: 2%;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+button {
+  /* padding: 5px 6px; */
+  height: 90px;
+  /* max-height: 40px; */
+  /* *box-shadow: 4px 4px 15px 0 rgb(0 0 0 / 20%); */
+  border-color:  #254cdd ;
+  border: none;
+  background: none;
+  color:white;
+  background-color:#2951f1;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  /* align-items: center; */
+  /* margin-right: auto; */
+  font-size:30px;
+  /* font-weight: 300; */
+  /* text-align: center; */
+  /* font-weight: bold; */
+  cursor:pointer;
+  align-items: flex-start;
+  padding-left: 0%;
+  /* width:30%; */
+  min-width: 250px;
+  /* margin-top: 70px; */
+  font-family: Rubik, sans-serif;
+}
+
+#logo {
+  float:left;
+  display: flex;
+  margin-left: -10px;
+  margin-top: -16px;
+  width: 210px;
+}
+
+.walletButton {
+  padding: 7px 16px;
+  background-color: white;
+  float:right;
+  border: 2px solid #3b4e92 ;
+  border-radius: 5px;
+  color:#254cdd;
+  margin-top: 0px;
+  height: 60px;
+  font-size: 20px;
+}
+#searchbar{
+  padding-top: 13%;
+  align-items: center;
+}
+h2{
+  font-size: 90px;
+  font-style: oblique;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: greenyellow;
+  text-align: center;
+  display: block;
+  clear:both;
+  font-weight:400;
+}
+h3{
+  margin-top: 70px;
+  margin-bottom: 2%;
+  font-size: 30px;
+  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+  color:rgb(0, 34, 255);
+  text-align: center;
+  display: block;
+  clear:both;
+  font-weight:400;
+}
+a {
+  color:#254cdd
+}
+.footer{
+  padding-left: 10%;
+  display: flex;
+  vertical-align:middle;
+  position: absolute;
+  left: 0;
+  background-color: #202846;
+  width: 100%;
+  height: 10rem;
+  text-align: center;
+  padding-top:60px;
+  font-size: 20px;
+  font-weight: 500;
+  color:white;
+}
+
+#board {
+  margin-top: 400px;
+  margin-bottom: 200px;
+}
+
+#connected{
+  display:none;
+}
+
+#aboutus{
+  padding-left: 30%;
+}
