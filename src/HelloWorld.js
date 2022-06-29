@@ -240,12 +240,7 @@ const onChangeFunc = async (e) =>
                 String(account).substring(38)})</button>
             )
           }
-        </div>
-
-      {/* <h2 style={{ paddingTop: "50px" }}>Your One Time Purchase Customizable Web3 Username</h2> */}
-      {/* <p>{message}</p> */}
-
-      
+        </div>      
       <div id = "searchbar">
       <h1> Buy Once, Own For Life! </h1>
       <row>
@@ -278,8 +273,6 @@ const onChangeFunc = async (e) =>
       
       </div>
       <div id = "board">
-
-      
       </div>
     </div>
      
