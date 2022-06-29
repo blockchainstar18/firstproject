@@ -146,7 +146,8 @@ const onChangeFunc = async (e) =>
     setPrice("")
     let len = e.target.value.length;
     if(e.target.value.length >= 3 )
-      if(e.target.value.substr(e.target.value.length - 3) == ".0x")
+      if(e.target.value.substr(e.target.value.length - 3) == ".0x" ||
+      e.target.value.substr(e.target.value.length - 3) == ".0X")
         len -= 3;
     var temp = 10;
     // if(len > 4) 
