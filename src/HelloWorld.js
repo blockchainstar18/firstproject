@@ -46,7 +46,7 @@ const HelloWorld = () => {
   const [provider, setProvider] = useState("");
   const [library, setLibrary] = useState("");
   const [account, setAccount] = useState("");
-  
+  const [viewtx, settx] = useState("");
   //called only once
   useEffect(async () => {
     // const message = await loadCurrentMessage();
@@ -134,16 +134,21 @@ const HelloWorld = () => {
       .send({ from: account, value: cost }, function (err, res) {
         if (err) {
           console.log("An error occured", err)
+          setStatus("User denied transaction")
           return
         }
         console.log("Hash of the transaction: " + res)
+        settx('https://ropsten.etherscan.io/tx/' + res)          
       })
+
+    
 };
 const onChangeFunc = async (e) =>
     {
     setNewMessage("");
     setStatus("")
     setPrice("")
+    settx("")
     let len = e.target.value.length;
     if(e.target.value.length >= 3 )
       if(e.target.value.substr(e.target.value.length - 3) == ".0x" ||
@@ -242,8 +247,11 @@ const onChangeFunc = async (e) =>
 
       
       <div id = "searchbar">
+      <h1> Buy Once, Own For Life! </h1>
+      <row>
       <h2> {newMessage_} </h2>
       <h3> {pricemessage}</h3>
+      </row>
         <input
           type="text"
           placeholder="Search for your new domain"
@@ -256,11 +264,18 @@ const onChangeFunc = async (e) =>
           }}
         />
         <button id="publish" onClick={onUpdatePressed}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
         </svg> Search
         </button>
         <p id="error">{status}</p>
+        <p>
+          {
+            viewtx !=="" ? (<p id = "success">Congratulations! You have registered the domain {newMessage_} &nbsp;&nbsp;&nbsp;
+            <a href = {viewtx} target = '_blank'>etherscan</a></p> ):(<p></p>)
+          }
+        </p>
+      
       </div>
       <div id = "board">
 
