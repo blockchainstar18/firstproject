@@ -202,5 +202,6 @@ a {
 }
 
 #aboutus{
-  padding-left: 18%;
+  /* padding-left: 18%; */
+  width: 30%;
 }
