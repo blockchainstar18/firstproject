@@ -252,7 +252,7 @@ const onChangeFunc = async (e) =>
           }
         </div>      
       <div id = "searchbar">
-      <h1> Buy Once, Own For Life! </h1>
+      <h1> Buy Once, Own For Life </h1>
       <row>
       <h2> {newMessage_} </h2>
       <h3> {pricemessage}</h3>
