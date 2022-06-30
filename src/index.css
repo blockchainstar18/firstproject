@@ -39,15 +39,17 @@ code {
 
 row {
   padding-top: 10px;
+  justify-content: center;
 }
 
 input {
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
+  border-left-style: hidden;
   /* border-bottom-style: groove; */
   font-size: 20px;
-  width: 60%;
+  width: 45%;
   background-color: rgb(232, 232, 232);
   border-color: rgba(201, 201, 214, 0.826);
   line-height: 60px;
@@ -108,7 +110,7 @@ button {
   align-items: flex-start;
   padding-left: 0%;
   /* width:30%; */
-  min-width: 250px;
+  min-width: 200px;
   /* margin-top: 70px; */
   font-family: Rubik, sans-serif;
 }
@@ -154,7 +156,7 @@ h2{
   display: block;
   clear:both;
   /* font-weight:300; */
-  width:70%;
+  width:60%;
   padding-left: 30%;
 }
 h3{
@@ -165,7 +167,7 @@ h3{
   /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   color:rgb(0, 34, 255);
   text-align:left;
-  padding-left:5%;
+  /* padding-left:5%; */
   padding-top:1%;
   display: block;
   clear:both;
@@ -200,5 +202,5 @@ a {
 }
 
 #aboutus{
-  padding-left: 20%;
+  padding-left: 18%;
 }

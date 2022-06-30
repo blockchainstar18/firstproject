@@ -24,11 +24,12 @@ import {
 
 import metamask from "./metamask.png";
 import coinbase from "./coinbase.png"
-import logo from "./0xlogo.svg";
+// import logo from "./0xlogo.svg";
+import logo from "./image_.png"
 const BigNumber = require('bignumber.js')
 
 const web3Modal = new Web3Modal({
-  cacheProvider: true, // optional
+  // cacheProvider: true, // optional
   providerOptions // required
 });
 
@@ -99,7 +100,7 @@ const HelloWorld = () => {
       setStatus("Domain name cannot be empty!")
       return;
     }
-    if(newMessage.length >=3 )
+    if(newMessage.length >3 )
       if(newMessage.substring(newMessage.length - 3) === ".0x" ||newMessage.substring(newMessage.length - 3) === ".0X")
         newMessage = newMessage.substring(0,newMessage.length - 3)
     if(containsSpecialChars(newMessage))
@@ -107,6 +108,15 @@ const HelloWorld = () => {
       setStatus("Incorrect format!")
       return
     }
+    var english = /^[A-Za-z0-9]*$/;
+    for (let index = 0; index < newMessage.length; index++) {
+      if (!english.test(newMessage[index]))
+        {
+          setStatus("Incorrect format!")
+          return
+        }
+    }
+
     newMessage += '.0x'
     newMessage = newMessage.toLowerCase()
     setNewMessage(newMessage)
@@ -150,7 +160,7 @@ const onChangeFunc = async (e) =>
     setPrice("")
     settx("")
     let len = e.target.value.length;
-    if(e.target.value.length >= 3 )
+    if(e.target.value.length > 3 )
       if(e.target.value.substr(e.target.value.length - 3) == ".0x" ||
       e.target.value.substr(e.target.value.length - 3) == ".0X")
         len -= 3;
@@ -247,6 +257,7 @@ const onChangeFunc = async (e) =>
       <h2> {newMessage_} </h2>
       <h3> {pricemessage}</h3>
       </row>
+      <row>
         <input
           type="text"
           placeholder="Search for your new domain"
@@ -263,11 +274,14 @@ const onChangeFunc = async (e) =>
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
         </svg> Search
         </button>
+        </row>
         <p id="error">{status}</p>
         <p>
           {
             viewtx !=="" ? (<p id = "success">Congratulations! You have registered the domain {newMessage_} &nbsp;&nbsp;&nbsp;
-            <a href = {viewtx} target = '_blank'>etherscan</a></p> ):(<p></p>)
+            {/* <a href = {viewtx} target = '_blank'>Etherscan</a> */}
+            </p> )
+            :(<p></p>)
           }
         </p>
       
