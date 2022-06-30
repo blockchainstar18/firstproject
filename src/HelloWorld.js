@@ -105,14 +105,14 @@ const HelloWorld = () => {
         newMessage = newMessage.substring(0,newMessage.length - 3)
     if(containsSpecialChars(newMessage))
     {
-      setStatus("Incorrect format!")
+      setStatus("Only letters and numbers are currently recognized!")
       return
     }
     var english = /^[A-Za-z0-9]*$/;
     for (let index = 0; index < newMessage.length; index++) {
       if (!english.test(newMessage[index]))
         {
-          setStatus("Incorrect format!")
+          setStatus("Only English is currently recognized!")
           return
         }
     }
@@ -226,7 +226,7 @@ const onChangeFunc = async (e) =>
   //the UI of our component
   return (
     <div id="container">
-      <img id="logo" src={logo} width="150" height="50"></img>
+      <img id="logo" src={logo}></img>
 {/*       
       <button id="walletButton" onClick={connectWalletPressed}>
         {walletAddress.length > 0 ? (
