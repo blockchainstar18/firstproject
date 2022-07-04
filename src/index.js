@@ -8,7 +8,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
     <div className='footer'>
-      <div id = "aboutus">Copyright © 2022 ZeroX Domains. All Rights Reserved.</div>
+      <div id = "aboutus">Copyright © 2022 ZeroX Domains.<br/> All Rights Reserved.</div>
         <div id = "aboutus">About us</div>
         <div id = "aboutus">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;&nbsp;

@@ -48,6 +48,7 @@ const HelloWorld = () => {
   const [library, setLibrary] = useState("");
   const [account, setAccount] = useState("");
   const [viewtx, settx] = useState("");
+  const [list, setlist] = useState("")
   //called only once
   useEffect(async () => {
     // const message = await loadCurrentMessage();
@@ -74,6 +75,13 @@ const HelloWorld = () => {
   });
 
   function addSmartContractListener() { //TODO: implement
+    helloWorldContract.events.UpdatedBalance({}, (error, data) => {
+      if (error) {
+        alert(error.message);
+      } else {
+        alert(data.returnValues[0])
+      }
+    });
   }
 
   function addWalletListener() { //TODO: implement
@@ -150,7 +158,8 @@ const HelloWorld = () => {
         console.log("Hash of the transaction: " + res)
         settx('https://ropsten.etherscan.io/tx/' + res)          
       })
-
+    const lists = await helloWorldContract.methods.searchAddress(account).call();
+        setlist(lists)
     
 };
 const onChangeFunc = async (e) =>
@@ -196,21 +205,19 @@ const onChangeFunc = async (e) =>
       const provider = await web3Modal.connect();
       const library = new ethers.providers.Web3Provider(provider);
       const accounts = await library.listAccounts();
-      const network = await library.getNetwork();
+      // const network = await library.getNetwork();
       setProvider(provider);
       setLibrary(library);
       if (accounts){
         setAccount(accounts[0]);
+        const lists = await helloWorldContract.methods.searchAddress(accounts[0]).call();
+        setlist(lists)
       }
-      // alert(accounts)
-      // setChainId(network.chainId);
-    // } 
-    // catch (error) {
-    //   setError(error);
-    // }
+      
   };
   const refreshState = () => {
     setAccount("");
+    setlist("")
     // setChainId();
     // setNetwork("");
     // setMessage("");
@@ -284,6 +291,13 @@ const onChangeFunc = async (e) =>
             :(<p></p>)
           }
         </p>
+        <div class="dropdown">
+          <button class="dropbtn">Registered domains</button>
+          <div class="dropdown-content">
+            {list.length > 0 ? list.map(name => (<a href="#">{name}</a>))
+            :(<p></p>)}
+          </div>
+        </div>
       
       </div>
       <div id = "board">
