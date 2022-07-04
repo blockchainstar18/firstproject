@@ -128,7 +128,7 @@ const HelloWorld = () => {
     newMessage += '.0x'
     newMessage = newMessage.toLowerCase()
     setNewMessage(newMessage)
-    setPrice('Price: '+price+' eth')
+    setPrice('Price: '+price+' ETH')
     
 
     const ispsble = await helloWorldContract.methods.registryIsPossible(newMessage).call();
@@ -285,7 +285,7 @@ const onChangeFunc = async (e) =>
         <p id="error">{status}</p>
         <p>
           {
-            viewtx !=="" ? (<p id = "success">Congratulations! You have registered the domain {newMessage_} &nbsp;&nbsp;&nbsp;
+            viewtx !=="" ? (<p id = "success">Congratulations! You have registered the domain {newMessage_} &nbsp;
             <a href = {viewtx} target = '_blank'>Etherscan</a>
             </p> )
             :(<p></p>)
