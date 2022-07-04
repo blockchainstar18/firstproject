@@ -286,7 +286,7 @@ const onChangeFunc = async (e) =>
         <p>
           {
             viewtx !=="" ? (<p id = "success">Congratulations! You have registered the domain {newMessage_} &nbsp;&nbsp;&nbsp;
-            {/* <a href = {viewtx} target = '_blank'>Etherscan</a> */}
+            <a href = {viewtx} target = '_blank'>Etherscan</a>
             </p> )
             :(<p></p>)
           }
