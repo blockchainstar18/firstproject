@@ -1,4 +1,12 @@
 import HelloWorld from './HelloWorld'
+import AboutUs from './AboutUs'
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Routes,
+  Link
+} from "react-router-dom";
 import './App.css';
 
 // import { ThirdwebProvider } from "@3rdweb/react";
@@ -8,17 +16,14 @@ import './App.css';
 // };
 function App() {
   return (
-    <div className="App">
-
-    <HelloWorld></HelloWorld>
-
+    <div>
+       <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<HelloWorld />} />
+            <Route path="/aboutus" element={<AboutUs />} />
+          </Routes>
+        </BrowserRouter>
     </div>
-      //   <ThirdwebProvider
-      //   connectors={connectors}
-      //   supportedChainIds={supportedChainIds}
-      // >
-      //   <HelloWorld />
-      // </ThirdwebProvider>
   );
 }
 
