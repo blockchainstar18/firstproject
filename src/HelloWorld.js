@@ -26,6 +26,7 @@ import metamask from "./metamask.png";
 import coinbase from "./coinbase.png"
 // import logo from "./0xlogo.svg";
 import logo from "./image_.png"
+import ox from "./0x.png"
 const BigNumber = require('bignumber.js')
 
 const web3Modal = new Web3Modal({
@@ -267,10 +268,12 @@ const onChangeFunc = async (e) =>
         </div>      
       <div id = "searchbar">
       <h1> Buy Once, Own For Life </h1>
+      <row><div id = "ox">.0x</div></row>
       <row>
       <h2> {newMessage_} </h2>
       <h3> {pricemessage}</h3>
       </row>
+      
       <row>
         <input
           type="text"
