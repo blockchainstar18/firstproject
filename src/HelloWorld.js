@@ -291,13 +291,22 @@ const onChangeFunc = async (e) =>
             :(<p></p>)
           }
         </p>
-        <div class="dropdown">
-          <button class="dropbtn">Registered domains</button>
-          <div class="dropdown-content">
-            {list.length > 0 ? list.map(name => (<a href="#">{name}</a>))
-            :(<p></p>)}
-          </div>
+        <div>
+          {
+            !account ? (
+              <p></p>
+            ) : (
+              <div class="dropdown">          
+                <button class="dropbtn">Your domains</button>
+                <div class="dropdown-content">
+                  {list.length > 0 ? list.map(name => (<a href="#">{name}</a>))
+                  :(<p></p>)}
+                </div>
+              </div>
+            )
+          }
         </div>
+        
       
       </div>
       <div id = "board">
