@@ -12,21 +12,25 @@ const AboutUs = () => {
             <button onClick={routeChange}>Back to Home</button>
             <h1>About us</h1>
             <p id = "paragraph">
-            For starters, you know the "About us" page,
-             I need you to add what I've written for it,
-              so when you click it, it takes you to a different page.For starters, you know the "About us" page,
-             I need you to add what I've written for it,
-              so when you click it, it takes you to a different page.For starters, you know the "About us" page,
-             I need you to add what I've written for it,
-              so when you click it, it takes you to a different page.For starters, you know the "About us" page,
-             I need you to add what I've written for it,
-              so when you click it, it takes you to a different page.For starters, you know the "About us" page,
-             I need you to add what I've written for it,
-              so when you click it, it takes you to a different page.For starters, you know the "About us" page,
-             I need you to add what I've written for it,
-              so when you click it, it takes you to a different page.For starters, you know the "About us" page,
-             I need you to add what I've written for it,
-              so when you click it, it takes you to a different page.
+            &nbsp;&nbsp;1. What is ZeroX Domains?<br/>
+            ZeroX Domains is a naming service offering the TLD .0x, a fresh variant of what is already
+            available for purchase.
+            ZeroX Domains is based on the Ethereum blockchain, giving you total control of your data.<br/><br/>
+            &nbsp;&nbsp;2. Availability<br/>
+            Any domain can be bought without restriction on character length. Regardless of who you may
+            be, you can purchase domains that have been restricted by other domain name providers, such
+            as 1.0x and the likes. We believe that everyone should have the chance of purchasing
+            something unique and special to them.
+            Currently, only English letters and numbers are recognized. This will change as the company
+            matures.<br/><br/>
+            &nbsp;&nbsp;3. Why the TLD .0x?<br/>
+            Well, it’s simple; every Ethereum-based wallet address begins with the same two characters in
+            the same order: 0x!<br/><br/>
+            &nbsp;&nbsp;4. The functionality…<br/>
+            ZeroX Domains aims to provide all the functions that you typically get with other domain name
+            providers and also introduce meaningful integrations so you can utilize your domain to the max.<br/><br/>
+            &nbsp;&nbsp;5. Your domains<br/>
+            Through this website, you can buy and sell your domains. The resell fee is capped at 1%.
             </p>
             <div className='footer'>
                 <div id = "aboutus">Copyright © 2022 ZeroX Domains.<br/> All Rights Reserved.</div>
