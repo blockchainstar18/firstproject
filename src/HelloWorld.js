@@ -29,7 +29,7 @@ import logo from "./image_.png"
 const BigNumber = require('bignumber.js')
 
 const web3Modal = new Web3Modal({
-  // cacheProvider: true, // optional
+  cacheProvider: true, // optional
   providerOptions // required
 });
 
