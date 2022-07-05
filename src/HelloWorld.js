@@ -236,6 +236,7 @@ const onChangeFunc = async (e) =>
   const routeChange = () =>{ 
       let path = `/aboutus`; 
       navigate(path);
+      window.scrollTo(0, 0)
   }
 
   //the UI of our component
@@ -324,7 +325,7 @@ const onChangeFunc = async (e) =>
 
       <div className='footer'>
         <div id = "aboutus">Copyright © 2022 ZeroX Domains.<br/> All Rights Reserved.</div>
-          <div id = "aboutus" onClick={routeChange} class = "aboutus">About us</div>
+          <div id = "aboutus"><p onClick={routeChange} class = "about"> About us</p></div>
           <div id = "aboutus">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;&nbsp;
             <a href = "https://twitter.com/ZeroxDomains" target="_blank" >

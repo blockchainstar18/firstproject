@@ -145,7 +145,7 @@ button {
 #ox{
     border-radius: 30px;
     height: 50px;
-    border: 1px solid #254cdd ;
+    /* border: 1px solid #254cdd ; */
     color:#254cdd;
     background-color:#e9ebf0;
     font-size:20px;
@@ -259,7 +259,12 @@ a {
   display: block;
 }
 
-.aboutus:hover {
+.about{
+  margin-left: 40%;
+  width: 90px;
+}
+
+.about:hover {
   text-decoration: underline;
   cursor: pointer;
   
@@ -267,11 +272,27 @@ a {
 
 #paragraph{
   /* text-align: center; */
-  margin-left: 15%;
-  margin-right: 15%;
+
   font-size: 20px;
-  padding-bottom: 10%;
+  /* padding-bottom: 10%; */
 }
+
+#gray{
+  padding-top: 1%;
+  padding-left: 10%; 
+  padding-right: 10%;
+  background-color: rgb(217, 215, 215);
+  height: 200px;
+}
+
+#white{
+  padding-top: 1%;
+  padding-left: 10%; 
+  padding-right: 10%;
+  height: 200px;
+}
+
+
 
 .dropdown-content a:hover {background-color: #ddd;}
 
