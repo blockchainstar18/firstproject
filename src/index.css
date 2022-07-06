@@ -138,7 +138,7 @@ button {
   font-size: 20px;
 }
 #searchbar{
-  padding-top: 10%;
+  padding-top: 6%;
   align-items: center;
 }
 
@@ -150,6 +150,8 @@ button {
     background-color:#e9ebf0;
     font-size:20px;
     padding-top: 10px;
+    margin-top: 1%;
+    margin-bottom: 3%;
     width: 70px;
     font-family: Rubik, sans-serif;
     text-align: center;
@@ -173,7 +175,7 @@ h2{
   text-align: center;
   /* clear:both; */
   /* font-weight:300; */
-  /* width:50%; */
+  width:60%;
   /* text-align: right; */
   padding-left: 30%;
 }
@@ -184,8 +186,8 @@ h3{
   width:30%;
   /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
   color:rgb(0, 34, 255);
-  text-align:center;
-  /* padding-left:5%; */
+  /* text-align:center; */
+  padding-left:3%;
   padding-top:1%;
   /* display: block; */
   /* clear:both; */
@@ -195,8 +197,8 @@ a {
   color:#254cdd
 }
 .footer{
-  padding-left: 5%;
-  display: flex;
+  /* padding-left: 5%; */
+  /* display: flex; */
   vertical-align:middle;
   position: absolute;
   left: 0;
@@ -221,7 +223,30 @@ a {
 
 #aboutus{
   /* padding-left: 18%; */
-  width: 31%;
+  /* width: 31%; */
+}
+
+.about{
+  /* margin-left: 40%; */
+  width: 90px;
+  margin:auto;
+}
+
+.home{
+  margin:auto;
+  width: 60px;
+}
+
+
+#copyright{
+  padding-left: 5%;
+  float: left;
+}
+
+#contactus{
+  margin-top:-1.8%;
+  padding-right:5%;
+  float: right;
 }
 
 .dropbtn {
@@ -259,15 +284,9 @@ a {
   display: block;
 }
 
-.about{
-  margin-left: 40%;
-  width: 90px;
-}
 
-.home{
-  margin-left: 40%;
-  width: 60px;
-}
+
+
 
 .about:hover {
   text-decoration: underline;
@@ -389,5 +408,5 @@ a {
 }
 
 .accordion-button:not(.collapsed)::after{
-  background-image: url('Capture - Copy.PNG');
+  background-image: url('Capture.PNG');
 }
