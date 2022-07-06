@@ -319,13 +319,7 @@ a {
 }
 
 
-.bluearea{
-  
-  padding-top: 3%;
-  padding-bottom:1%;
-  background-color: #2951f1;
-  color: rgb(245, 242, 235);
-}
+
 
 
 .dropdown-content a:hover {background-color: #ddd;}
@@ -334,13 +328,21 @@ a {
 
 .dropdown:hover .dropbtn {background-color: #061c75;}
 
+.bluearea{ 
+  padding-top: 3%;
+  padding-bottom:1%;
+  background-color: #2044d5;
+  color: rgb(245, 242, 235);
+}
+
+
 #accordionExample{
   margin:auto;
   width:50%;
 }
 
 .accordion-item{
-  background-color: #2951f1;
+  background-color: #2044d5;
   border-left:none;
   border-right: none;
   /* border-top: none; */
@@ -358,7 +360,7 @@ a {
 }
 
 .accordion-button{
-  background-color: #2951f1;
+  background-color: #2044d5;
   border:1px solid rgb(86, 112, 216);
   border-left:none;
   border-right: none;
@@ -369,7 +371,7 @@ a {
 }
 
 .accordion-button:not(.collapsed){
-  background-color: #2951f1;
+  background-color: #2044d5;
   color: rgb(245, 242, 235);
   /* padding-top: 2%; */
 }
