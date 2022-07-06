@@ -12,36 +12,48 @@ const AboutUs = () => {
         <div>
             <button onClick={routeChange}>Back to Home</button>
             <h1><b>About us</b></h1>
-            <p id = "paragraph">
+
             <div id = "white">
-            <h4>&nbsp;&nbsp;&nbsp;&nbsp;What is ZeroX Domains?</h4><br/>
-            
+            <p id = "title">What is ZeroX Domains?</p>
+            <p id = "text">
             ZeroX Domains is a naming service offering the TLD .0x, a fresh variant of what is already
             available for purchase.
-            ZeroX Domains is based on the Ethereum blockchain, giving you total control of your data.<br/><br/></div>
+            ZeroX Domains is based on the Ethereum blockchain, giving you total control of your data.
+            </p>
+            </div>
             <div id = "gray">
-            <h4>&nbsp;&nbsp;&nbsp;&nbsp;Availability</h4><br/>
+            <p id = "title">Availability</p>
+            <p id = "text">
             Any domain can be bought without restriction on character length. Regardless of who you may
             be, you can purchase domains that have been restricted by other domain name providers, such
             as 1.0x and the likes. We believe that everyone should have the chance of purchasing
             something unique and special to them.<br/>
             Currently, only English letters and numbers are recognized. This will change as the company
-            matures.<br/><br/></div>
-            <div id = "white">
-            <h4>&nbsp;&nbsp;&nbsp;&nbsp; Why the TLD .0x?</h4><br/>
-            Well, it’s simple; every Ethereum-based wallet address begins with the same two characters in
-            the same order: 0x!<br/><br/></div>
-            <div id = "gray">
-           <h4>&nbsp;&nbsp;&nbsp;&nbsp;The functionality…</h4><br/>
-            ZeroX Domains aims to provide all the functions that you typically get with other domain name
-            providers and also introduce meaningful integrations so you can utilize your domain to the max.<br/><br/></div>
-            <div id = "white">
-            <h4>&nbsp;&nbsp;&nbsp;&nbsp; Your domains </h4><br/>
-            Through this website, you can buy and sell your domains. The resell fee is capped at 1%.</div>
+            matures.
             </p>
+            </div>
+            <div id = "white">
+            <p id = "title">Why the TLD .0x?</p>
+            <p id = "text">Well, it’s simple; every Ethereum-based wallet address begins with the same two characters in
+            the same order: 0x!
+            </p>
+            </div>
+            <div id = "gray">
+            <p id = "title">The functionality…</p>
+            <p id = "text">ZeroX Domains aims to provide all the functions that you typically get with other domain name
+                providers and also introduce meaningful integrations so you can utilize your domain to the max.
+            </p>
+            </div>
+            
+            <div id = "white">
+            <p id = "title">Your domains</p>
+            <p id = "text"> 
+            Through this website, you can buy and sell your domains. The resell fee is capped at 1%.
+            </p>
+            </div>
             <div className='footer'>
                 <div id = "aboutus">Copyright © 2022 ZeroX Domains.<br/> All Rights Reserved.</div>
-                <div id = "aboutus" onClick={routeChange} class = "aboutus"><p onClick={routeChange} class = "about"> Home</p></div>
+                <div id = "aboutus" onClick={routeChange} class = "aboutus"><p onClick={routeChange} class = "home"> Home</p></div>
                 <div id = "aboutus">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;&nbsp;
                     <a href = "https://twitter.com/ZeroxDomains" target="_blank" >

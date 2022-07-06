@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import Web3Modal, { PROVIDER_WRAPPER_CLASSNAME } from "web3modal";
 import { ethers } from "ethers";
 import { providerOptions } from "./providerOptions";
+// import Accordion from './Accordion';
+// import { accordionData } from './content';
 import {
   helloWorldContract,
   connectWallet,
@@ -239,23 +241,11 @@ const onChangeFunc = async (e) =>
       window.scrollTo(0, 0)
   }
 
+
   //the UI of our component
   return (
     <div>
       <img id="logo" src={logo}></img>
-{/*       
-      <button id="walletButton" onClick={connectWalletPressed}>
-        {walletAddress.length > 0 ? (
-          "Connected: " +
-          String(walletAddress).substring(0, 6) +
-          "..." +
-          String(walletAddress).substring(38)
-        ) : (
-          <span>Connect Wallet</span>
-        )}
-      </button> */}
-
-
         <div >
           {
             !account ? (
@@ -268,7 +258,8 @@ const onChangeFunc = async (e) =>
           }
         </div>      
       <div id = "searchbar">
-      <h1> Buy Once, Own For Life </h1>
+        {/* Buy Once, Own For Life */}
+      <h1><b> Buy Once, Own For Life </b></h1>
       <row><div id = "ox">.0x</div></row>
       <row>
       <h2> {newMessage_} </h2>
@@ -317,11 +308,69 @@ const onChangeFunc = async (e) =>
             )
           }
         </row>
-        
+        <div id = "board">
+        </div>
+        <div>
+        <div class = "bluearea">
+        <h1>FAQ</h1>
+          <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Where is my domain stored?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  Your domain is stored on the blockchain after it has been purchased.
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  What wallets are supported?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  Metamask and Coinbase Wallet are supported.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Are there yearly fees for my domain?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  Short answer: no.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  How do I know that my domain is on the Ethereum blockchain?
+                  </button>
+                </h2>
+                <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  Straight after you purchase your domain, an Etherscan link will appear, directing you 
+      to the particular domain transaction. Please note that this link will disappear after you refresh or leave the website.
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
       
-      </div>
-      <div id = "board">
-      </div>
 
       <div className='footer'>
         <div id = "aboutus">Copyright © 2022 ZeroX Domains.<br/> All Rights Reserved.</div>
