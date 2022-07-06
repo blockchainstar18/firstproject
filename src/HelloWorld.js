@@ -314,19 +314,19 @@ const onChangeFunc = async (e) =>
         <div class = "bluearea">
         <h1>FAQ</h1>
           <div class="accordion" id="accordionExample">
+              
               <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <h2 class="accordion-header" id="heading1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
                   Where is my domain stored?
                   </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                   Your domain is stored on the blockchain after it has been purchased.
                   </div>
                 </div>
               </div>
-
               
               <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
