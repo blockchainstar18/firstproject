@@ -3,7 +3,7 @@ const alchemyKey = 'https://eth-ropsten.alchemyapi.io/v2/gAQOlZdHS3eIpGULYGNg2jR
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 const contractABI = require("../contract-abi.json");
-const contractAddress = "0x4946E2dd744a470E6321C75E30476581f475c9AD";
+const contractAddress = "0x069CbA76416f83b1b8dD1059EC7C6421dc5C22a6";
 // 0x4fE944b980E34D77beF8758b3c3B40762FD706bB
 
 // 0x4a161e492cCbb7aB12F5b0e6FbA507734E7eCF0E
