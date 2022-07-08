@@ -322,7 +322,7 @@ const HelloWorld = () => {
         }
       </div>
       <div id="searchbar">
-        <h1><b> Buy Once, Own For Life </b></h1>
+        <h1><b>Buy & Sell Your Domains </b></h1>
         <row><div id="ox">.0x</div></row>
         <row>
           <h2> {newMessage_} </h2>
@@ -470,6 +470,19 @@ const HelloWorld = () => {
                   <div class="accordion-body">
                     Straight after you purchase your domain, an Etherscan link will appear, directing you
                     to the particular domain transaction. Please note that this link will disappear after you refresh or leave the website.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                  How do I sell my domain?
+                  </button>
+                </h2>
+                <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                  Hover over "Your domains" and then select the domain you would like to sell.
+                   You can change the price multiple times, paying only gas fees each time.
                   </div>
                 </div>
               </div>
