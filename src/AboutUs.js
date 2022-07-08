@@ -24,16 +24,14 @@ const AboutUs = () => {
             <div id = "gray">
             <p id = "title">Availability</p>
             <p id = "text">
-            Any domain can be bought without restriction on character length. Regardless of who you may
-            be, you can purchase domains that have been restricted by other domain name providers, such
-            as 1.0x and the likes. We believe that everyone should have the chance of purchasing
+            Any domain can be bought without restriction on character length. We believe that everyone should have the chance of purchasing
             something unique and special to them.<br/><br/>
             Currently, only English letters and numbers are recognized. This will change as the ecosystem develops.
             </p>
             </div>
             <div id = "white">
             <p id = "title">Why the TLD .0x?</p>
-            <p id = "text">Well, it’s simple; every Ethereum-based wallet address begins with the same two characters in
+            <p id = "text">Well, it's simple; every Ethereum-based wallet address begins with the same two characters in
             the same order: 0x!
             </p>
             </div>
