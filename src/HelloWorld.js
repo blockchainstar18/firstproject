@@ -30,6 +30,7 @@ import metamask from "./metamask.png";
 import coinbase from "./coinbase.png"
 // import logo from "./0xlogo.svg";
 import logo from "./image_.png"
+import ethericon from "./ether.png"
 import ox from "./0x.png"
 import { findAllByTestId } from "@testing-library/react";
 import { utils } from "ethers";
@@ -45,6 +46,7 @@ const web3Modal = new Web3Modal({
 let newMessage = "";
 let price;
 let element;
+let tempSaleName = "";
 // const { address, chainId, provider } = useWeb3();
 const HelloWorld = () => {
   //state variables
@@ -64,6 +66,7 @@ const HelloWorld = () => {
   const [salePrice, setSalePrice] = useState(0)
   const [buyPrice, setBuyPrice] = useState(0)
   const [saleBool, setSaleBool] = useState([]);
+  const [nonmean, setN] = useState(false);
   //called only once
   useEffect(async () => {
     // const message = await loadCurrentMessage();
@@ -188,6 +191,10 @@ const HelloWorld = () => {
 
 
   const prepareSale = async () => {
+    if(salePrice <= 0){
+      alert("You must set price as more than 0!")
+      return;
+    }
     let cost = utils.parseEther(salePrice)
     // alert(cost)
       await helloWorldContract.methods.prepare_sale(saleName, cost)
@@ -305,7 +312,7 @@ const HelloWorld = () => {
     return {name: name, issale: issale_};
   }
 
-
+  let fl = false;
   //the UI of our component
   return (
     <div>
@@ -322,7 +329,57 @@ const HelloWorld = () => {
         }
       </div>
       <div id="searchbar">
+        <div id = "newrow">
         <h1><b>Buy & Sell Your Domains </b></h1>
+        <div id = "yourdomains">
+          {
+            !account ? (
+              <p></p>
+            ) : (
+              <div class="dropdown">
+                <button class="dropbtn" >Your domains</button>
+                <div class="dropdown-content"  >
+                  {
+                    list.length > 0 ?
+                      list.map((name) => {
+                        const is = saleBool.filter(s=>s.name === name);
+
+                        const re = (
+                          ((is.length > 0)? is[0].issale:false)
+                            ?
+                            (<a id="salecheck" onMouseEnter={(e) =>{e.target.innerHTML = "CHANGE PRICE";
+                                                                    e.target.style.fontWeight = "bold";
+                                                                    e.target.style.textAlign = "center";
+                                                                    tempSaleName = name;}
+                                                            } 
+                            onMouseLeave = {(e) =>{ e.target.innerHTML = tempSaleName;
+                               e.target.style.fontWeight = "normal";
+                               e.target.style.textAlign = "left";
+                              }}
+                             onClick={() => { setPopup(true); setSaleName(name); setSaleMessage("") }}>{name}</a>) :
+                            (<a onMouseEnter={(e) =>{e.target.innerHTML = "SELL";
+                                                    e.target.style.fontWeight = "bold";
+                                                    e.target.style.textAlign = "center";
+                              tempSaleName = name;}} 
+                            onMouseLeave = {(e) =>{ e.target.innerHTML = tempSaleName;
+                               e.target.style.fontWeight = "normal";
+                               e.target.style.textAlign = "left";
+                              }}
+                             onClick={() => { setPopup(true); setSaleName(name); setSaleMessage("") }}>{name}</a>)
+                          
+                        )
+                        return name.length > 0 ? re : ""
+                        
+                      }
+                      )
+                      : (<p></p>)
+                  }
+                </div>
+              </div>
+            )
+          }</div>
+        </div>
+
         <row><div id="ox">.0x</div></row>
         <row>
           <h2> {newMessage_} </h2>
@@ -350,8 +407,9 @@ const HelloWorld = () => {
         <p id="error">{status}</p>
         <p>
           {
-           buyPrice != 0 ? (<p id = "error">Buy from owner for {buyPrice/1000000000000000000}  ETH 
-          <button class = "buybut" onClick={buyFromUser}>Buy</button> </p>):(<p></p>)
+           buyPrice != 0 ? (<div id = "newr">
+            <p id = "buyfrom">Buy from owner for {buyPrice/1000000000000000000}  ETH </p>
+          <button id = "buybut" onClick={buyFromUser}>Buy</button> </div>):(<p></p>)
           }
           {
             viewtx !== "" ? (<p id="success">Congratulations! You have registered the domain {newMessage_} &nbsp;
@@ -362,54 +420,27 @@ const HelloWorld = () => {
           }
           {(<p id="success">{saleMessage}</p>)}
         </p>
-        <row>
-          {
-            !account ? (
-              <p></p>
-            ) : (
-              <div class="dropdown">
-                <button class="dropbtn" >Your domains</button>
-                <div class="dropdown-content">
-                  {
-                    list.length > 0 ?
-                      list.map((name) => {
-                        const is = saleBool.filter(s=>s.name === name);
-                        const a = (
-                          (is.length > 0 ? is[0].issale:false)
-                            ?
-                            (<a id="salecheck" onClick={() => { setPopup(true); setSaleName(name); setSaleMessage("") }}>{name}</a>) :
-                            (<a onClick={() => { setPopup(true); setSaleName(name); setSaleMessage("") }}>{name}</a>)
-                          
-                        )
-                        
-                        return a;
-                      }
-                      )
-                      : (<p></p>)
-                  }
-                </div>
-              </div>
-            )
-          }
-        </row>
-
+        
         <div class="popup-wrapper">
           <Popup open={popupOpened} onClose={() => { setPopup(false); }}>
             <row>
-              <h5>How much would you like to sell your domain for?</h5>
-              <input id="priceinput" type="text" onChange={salePriceChange}
-                placeholder="ETH"></input>
-              <h5> &nbsp;ETH</h5>
-            </row>
+              <h5>List domain for sale</h5>
+              </row>
+            <row>
+              {/* <img src = {ethericon} width = "20" /> */}
+              <h5> {saleName} &nbsp;&nbsp;</h5>
+            <input id="priceinput" type="text" onChange={salePriceChange}
+                ></input><h5>&nbsp;&nbsp;ETH</h5>
+              </row>
             <row>
               <p id="font">(Note: 1% of the sale will go to ZeroX Domains)</p>
             </row>
             <row>
-              <button id="cancelb" onClick={() => { setPopup(false); setSaleName(""); setSalePrice(0) }}>Cancel</button>
-              <button id="confirmb" onClick={async () => {
+              <div id="cancelb" onClick={() => { setPopup(false); setSaleName(""); setSalePrice(0) }}>Cancel</div>
+              <div id="confirmb" onClick={async () => {
                 prepareSale()
                 setPopup(false)
-              }}>Confirm</button>
+              }}>Confirm</div>
             </row>
 
           </Popup>
