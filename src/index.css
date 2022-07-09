@@ -50,7 +50,7 @@ input {
   border-left-style: hidden;
   /* border-bottom-style: groove; */
   font-size: 20px;
-  width: 39%;
+  width: 34%;
   background-color: rgb(232, 232, 232);
   border-color: rgba(201, 201, 214, 0.826);
   line-height: 60px;
@@ -254,7 +254,7 @@ h2{
   text-align: center;
   /* clear:both; */
   /* font-weight:300; */
-  width:60%;
+  width:55%;
   /* text-align: right; */
   padding-left: 30%;
 }
