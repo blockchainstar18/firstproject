@@ -145,7 +145,7 @@ const HelloWorld = () => {
     newMessage += '.0x'
     newMessage = newMessage.toLowerCase()
     setNewMessage(newMessage)
-    setPrice('Price: ' + price + ' ETH')
+    setPrice('Price: ' + String(price).substring(0,6) + ' ETH')
 
 
     const ispsble = await helloWorldContract.methods.registryIsPossible(newMessage).call();
@@ -408,7 +408,7 @@ const HelloWorld = () => {
         <p>
           {
            buyPrice != 0 ? (<div id = "newr">
-            <p id = "buyfrom">Buy from owner for {buyPrice/1000000000000000000}  ETH </p>
+            <p id = "buyfrom">Buy from owner for {String(buyPrice/1000000000000000000).substring(0,4) }  ETH </p>
           <button id = "buybut" onClick={buyFromUser}>Buy</button> </div>):(<p></p>)
           }
           {
