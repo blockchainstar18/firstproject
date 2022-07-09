@@ -176,7 +176,7 @@ button {
 
 .popup-content{
   border-radius: 15px;
-  width:22% !important;
+  width:27% !important;
   height: 30% !important;
 }
 
@@ -339,8 +339,9 @@ a {
 #yourdomains{
   /* padding-right:5%; */
   /* float: right; */
-  margin-left:87%;
+  /* margin-left:87%; */
   position: absolute;
+  right: 30px;
 }
 
 .dropbtn {
