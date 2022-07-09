@@ -106,7 +106,7 @@ h5{
 #buyfrom {
   color:  #ef1111;
   /* margin-top: 2%; */
-  /* margin-left: 10%; */
+  /* margin-left: 8%; */
   font-size: 25px;
   font-weight: 600;
   text-align: center;
@@ -360,10 +360,11 @@ a {
 }
 
 #buybut {
-  margin-left: 25%;
+  margin-left: 450px;
   background-color: #2951f1;
   color: white;
-  /* margin-left:3%; */
+  /* position: absolute; */
+  /* right: 650px; */
   font-size: 20px;
   border: none;
   border-radius: 20px;
