@@ -171,13 +171,14 @@ button {
   height: 30px;
   padding-top: 3px;
   margin-top:5px;
+  margin-bottom: 20px;
   text-align: center !important;  
 }
 
 .popup-content{
   border-radius: 15px;
-  width:27% !important;
-  height: 30% !important;
+  width:400px !important;
+  height: 250px !important;
 }
 
 #confirmb{
@@ -341,7 +342,7 @@ a {
   /* float: right; */
   /* margin-left:87%; */
   position: absolute;
-  right: 30px;
+  right: 70px;
 }
 
 .dropbtn {
