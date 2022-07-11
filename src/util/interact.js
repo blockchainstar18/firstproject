@@ -1,9 +1,9 @@
 require('dotenv').config();
-const alchemyKey = 'https://eth-ropsten.alchemyapi.io/v2/gAQOlZdHS3eIpGULYGNg2jRhyxwmA-DS';//process.env.REACT_APP_ALCHEMY_KEY;
+const alchemyKey = 'https://eth-mainnet.alchemyapi.io/v2/gAQOlZdHS3eIpGULYGNg2jRhyxwmA-DS';//process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 const contractABI = require("../contract-abi.json");
-const contractAddress = "0x069CbA76416f83b1b8dD1059EC7C6421dc5C22a6";
+const contractAddress = "0xd3e8a79Ba28639c7372AAE97acBb6042cf9cb343";
 // 0x4fE944b980E34D77beF8758b3c3B40762FD706bB
 
 // 0x4a161e492cCbb7aB12F5b0e6FbA507734E7eCF0E
