@@ -3,7 +3,9 @@ const alchemyKey = 'https://eth-mainnet.alchemyapi.io/v2/gAQOlZdHS3eIpGULYGNg2jR
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 const contractABI = require("../contract-abi.json");
-const contractAddress = "0xd3e8a79Ba28639c7372AAE97acBb6042cf9cb343";
+// const contractAddress = "0x9042ef10E7D853bA62d30Fe2a018155322735DFc";
+
+const contractAddress = "0xaf2f087149489a9b887804Bc196A5A17ab9a73Ef";
 
 
 
