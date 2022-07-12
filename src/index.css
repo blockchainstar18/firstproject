@@ -20,6 +20,10 @@ code {
     monospace;
 }
 
+#flex{
+  display:flex;
+}
+
 #container {
   width: 190vh;
  /* border: 4px dashed rgba(4, 4, 5, 0.1); */
@@ -259,6 +263,18 @@ h2{
   /* text-align: right; */
   padding-left: 30%;
 }
+
+#greentext{
+  font-size: 50px;
+  /* font-style: oblique; */
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(170, 255, 41);
+  text-align: left;
+  margin-left:28%;
+  width:34%;
+  /* padding-left: 30%; */
+}
+
 h3{
   /* margin-top: 70px; */
   /* margin-bottom: 2%; */
@@ -268,7 +284,7 @@ h3{
   color:rgb(0, 34, 255);
   /* text-align:center; */
   /* padding-left:3%; */
-  padding-top:1%;
+  padding-top:25px;
   /* display: block; */
   /* clear:both; */
   /* font-weight:400; */

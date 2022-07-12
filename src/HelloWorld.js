@@ -381,10 +381,10 @@ const HelloWorld = () => {
         </div>
 
         <row><div id="ox">.0x</div></row>
-        <row>
-          <h2> {newMessage_} </h2>
+        <div id = "flex">
+          <div id = "greentext"> {newMessage_} </div>
           <h3> {pricemessage}</h3>
-        </row>
+        </div>
 
         <row>
           <input
