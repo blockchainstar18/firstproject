@@ -178,7 +178,7 @@ const HelloWorld = () => {
           return
         }
         console.log("Hash of the transaction: " + res)
-        settx('https://ropsten.etherscan.io/tx/' + res)
+        settx('https://etherscan.io/tx/' + res)
       })
     const lists = await helloWorldContract.methods.getNames(account).call();
     setlist(lists)
